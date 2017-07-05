@@ -1,0 +1,17 @@
+﻿@using Counter.Models;
+@{
+    ViewBag.Title = "Home Page";
+}
+@model Counter
+@using (Html.BeginForm("UpdateCount", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+<div class="row">
+    <div class="col-md-12">
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.Count)
+        <h2>@Model.Count</h2> 
+        <input type="submit" class="btn btn-default" value="Count" />      
+    </div>
+</div>
+
+}
